@@ -1,0 +1,431 @@
+@import "../mixin";
+@import "../reset";
+@import "../variables";
+
+body{
+    font-family: 'Euclid Circular A', sans-serif;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+
+header {
+    @include flex ($direction: row, $justify: space-between, $align: center);
+    border-bottom: 1px solid $grey;
+    max-height: 4.53rem;
+    padding: 1.125rem 1rem 1rem;
+
+    @include responsive_lg {
+        border: none;
+        padding: 0;
+        margin: 1.25rem 7rem 0;
+    }
+}
+
+.left {
+    @include flex ($direction: row, $justify: space-around, $align: center);
+    gap: 1rem;
+
+    @include responsive_lg {
+        padding: 0;
+    }
+}
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    @include flex ($direction: column, $justify: center, $align: center);
+    gap: 2px;
+
+    span {
+        background-color: #2E3A59;
+        width: 18px;
+        height: 2px;
+    }
+
+    @include responsive_lg {
+        display: none;
+    }
+}
+
+.right {
+    display: none;
+
+    @include responsive_lg {
+        display: block;
+        @include flex ($direction: row, $justify: space-between, $align: center);
+    }
+
+}
+
+.navbar {
+    display: none;
+
+    @include responsive_lg {
+        display: block;
+        @include flex ($direction: row, $justify: space-between, $align: center);
+        gap: 3.125rem;
+
+        .nav-links {
+            a {
+                color: $dark;
+            }
+        }
+        .nav-links a:hover{
+            color: $yellow500;
+        }
+    }
+}
+
+
+
+@include responsive_lg {
+    .language {
+        @include flex ($direction: row, $justify: space-between, $align: center);
+        color: $lightdark;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+
+        span {
+            background-color: $lightgrey;
+            width: 1px;
+            height: 20px;
+            margin: 0 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+
+.currency {
+    border: none;
+    color: $lightdark;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.login {
+    @include buttons ($color: $dark, $border: 1px solid #C5CEE0, $width: 5.75rem, $height: 2.5rem, $radius: 0.5rem, $fsize: 0.875rem);
+    margin-left: 2rem;
+    a{
+        color: $dark;
+    }
+}
+
+.signup {
+    @include buttons ($background: $yellow500, $color: $dark, $border: none, $width: 6.313rem, $height: 2.5rem, $radius: 0.5rem, $fsize: 0.875rem);
+    margin-left: 1rem;
+  
+}
+
+.join {
+    @include buttons ($background: $yellow500, $color: $dark, $border: none, $width: 5rem, $height: 2.5rem, $radius: 0.5rem, $fsize: 0.875rem);
+
+    @include responsive_lg {
+        display: none;
+    }
+}
+
+.title-name{
+    @include font(normal,600,1.5rem,2rem,$dark,center);
+    margin-top:1.5rem;
+    @include responsive_lg{
+        font-size: 2.125rem;
+        line-height: 2.5rem;
+    }
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem 4rem;
+    
+    #box-a{
+        display: none;   
+    }
+    @include responsive_lg{
+    grid-template-columns: 1fr 1fr;
+
+    #box-a{
+        display: block;
+    }
+    }
+
+}
+
+.box1{
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+    @include responsive_lg{
+    grid-column: 1/2;
+ }
+
+figure {
+    margin: 0;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+
+.photo {
+    width: 95%;
+    position: relative;
+    margin: 0 2rem 2rem 1rem;
+  }
+  
+  .photo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    left: -1.5rem;
+    bottom: -1.5rem;
+    right: 1rem;
+    border-radius: 4px;
+    border: 1px solid $backcolor;
+  }
+
+  .mob{
+    @include font(normal,600,1.25rem,1.75rem,$dark,left);
+    width: 95%;
+    margin-left: auto;
+    @include responsive_lg{
+      display: none;
+    }
+  }
+.desk{
+    display: none;
+    @include responsive_lg{
+    display: block;
+    @include font(normal,600,1.5rem,2rem,$dark,left);
+    width: 95%;
+    margin-left: auto;
+    }
+}
+ p:first-of-type{
+margin-right: 3rem;
+}
+.content{
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    width: 95%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+p{
+    @include font(normal,400,0.875rem,1.25rem,$grey);
+}
+}
+
+
+
+.box2{
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+    @include responsive_lg{
+     grid-column: 2/-1;  
+    }
+
+figure {
+    margin: 0;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+
+.photo {
+    width: 95%;
+    position: relative;
+    margin: 0 2rem 2rem 1rem;
+  }
+  
+  .photo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    left: -1.5rem;
+    bottom: -1.5rem;
+    right: 1rem;
+    border-radius: 4px;
+    border: 1px solid $backcolor;
+  }
+
+  .mob{
+    @include font(normal,600,1.25rem,1.75rem,$dark,left);
+    width: 95%;
+    margin-left: auto;
+    @include responsive_lg{
+      display: none;
+    }
+  }
+.desk{
+    display: none;
+    @include responsive_lg{
+    display: block;
+    @include font(normal,600,1.5rem,2rem,$dark,left);
+    width: 95%;
+    margin-left: auto;
+    }
+}
+
+
+ p:first-of-type{
+margin-right: 3rem;
+}
+.content{
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    width: 95%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+p{
+    @include font(normal,400,0.875rem,1.25rem,$grey);
+}
+}
+
+.scroll{
+   @include flex($direction:row);
+    margin: 0 1rem 5rem;
+    @include responsive_lg{
+        justify-content: center;
+    }
+  .numbers{
+    @include flex($direction:row);
+    gap:21px;
+    margin: 0 41px;
+    @include responsive_lg{
+        margin: 0 4rem;
+        width: 26.75rem;
+        justify-content: space-between;
+    }
+  } 
+  
+  p{
+    @include font(normal,400,1.5rem,1.563rem,$dark,center);
+    padding-top: 7px;
+  }
+
+  svg{
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+  }
+
+  p:nth-child(3){
+    background-color: $yellow500;
+    width: 32px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+    padding-top: 7px;
+  }
+}
+
+
+footer{
+    background-color: $backcolor;
+    padding: 3.5em 1em 2em;
+    @include responsive_lg{
+        padding:3.5rem 15.31rem 1.5rem 7rem;
+ 
+    }
+}
+.footer_links {
+    @include flex($direction: column);
+    gap: 3.5em;
+    margin-bottom: 4.5rem;
+    
+    .logo {
+       width: 127px;
+       align-self: center;
+    }
+
+    @include responsive_lg{
+        flex-direction: row;
+        justify-content: space-between;
+        .logo{
+            align-self: flex-start;
+        }
+    }
+    
+
+}
+
+.company,
+.product,
+.legal {
+    h3 {
+        @include font (normal, 400, 1.25em, 1.75em, $dark, center);
+        margin-bottom: 1.5em;
+    }
+
+    a {
+        @include font (normal, 400, 1em, 1.25em, $grey, center);
+    }
+
+    li {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    a:hover {
+        color: $dark;
+    }
+}
+
+.social {
+    @include flex($justify: center);
+    margin-bottom: 3rem;
+    gap: 24px;
+    .links {
+        width: 3rem;
+        height: 3rem;
+        @include flex($direction: column, $justify: center);
+        text-align: center;
+    }
+    @include responsive_lg{
+        margin-bottom: 2.5rem;
+        margin-left: 8.31rem;
+    }
+}
+
+.copyright {
+    @include flex($direction: row, $justify: center, $align: center);
+    gap: 0.5em;
+
+    p {
+        @include font (normal, 400, 0.875em, 1.25em, $dark, center);
+    }
+    @include responsive_lg{
+        margin-left: 8.31rem;
+    }
+}

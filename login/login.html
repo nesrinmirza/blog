@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav__container">
+            <div class="top-nav">
+                <a class="logo" href="../home/home.html"><img src="./Logo.svg" alt="#"></a>
+                <img class="icon-x" src="./Icon.svg" alt="">
+                <div class="right_nav">
+                    <p>Not have an account?</p>
+                    <button>Sign up</button>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <button class="login">Login</button>
+                <button class="signup">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="login__container">
+        <div class="image">
+            <img src="./photo.png" alt="">
+        </div>
+        <div class="login__side">
+            <h3>Login</h3>
+            <p class="first_p">Hello again!</p>
+            <div class="socials">
+                <button class="btn"><a href="https://www.google.com/"><img src="./google.svg" alt=""></a>with
+                    Google</button>
+                <button class="btn"><a href="https://www.facebook.com/"><img src="./facebook.svg" alt=""></a>with
+                    Facebook</button>
+            </div>
+            <div class="or">
+                <span class="line"></span>
+                <p>or</p>
+                <span class="line"></span>
+            </div>
+
+            <label for="email_input">Email</label>
+            <input class="in-put" type="email" name="email" id="email_input" placeholder="Enter your email">
+
+
+            <label for="password_input">Password</label>
+            <div class="password">
+                <input class="in-put" type="password" name="password" autocomplete="current-password" required=""
+                    id="id_password" placeholder="Enter your password">
+                <i class="fa-solid fa-eye" id="togglePassword"
+                    style="margin-left: -30px; cursor: pointer; color: grey;"></i>
+            </div>
+
+            <div class="bottom-line">
+                <div class="remind">
+                    <input type="checkbox" id="reminder" name="reminder" checked>
+                    <label for="reminder">Remind me</label>
+                </div>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="last-btn">Login</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="./login.js"></script>
+</body>
+
+</html>

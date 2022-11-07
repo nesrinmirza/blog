@@ -1,0 +1,303 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "Euclid Circular A", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem 1rem 0;
+}
+.top-nav .logo {
+  padding-bottom: 1.25rem;
+}
+.top-nav .icon-x {
+  width: 24px;
+  height: 24px;
+  margin-top: 0.3rem;
+  align-self: flex-start;
+}
+.top-nav .right_nav {
+  display: none;
+}
+@media (min-width: 992px) {
+  .top-nav {
+    margin: 1.5rem 7rem 4.5rem;
+  }
+  .top-nav .right_nav {
+    display: block;
+    display: flex;
+    gap: 2rem;
+  }
+  .top-nav .right_nav button {
+    width: 6.31rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #222B45;
+    background-color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #222B45;
+    text-align: center;
+  }
+  .top-nav .right_nav p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #2E3A59;
+    text-align: center;
+    align-self: center;
+  }
+  .top-nav .icon-x {
+    display: none;
+  }
+}
+
+.bottom-nav {
+  background-color: #FFD339;
+  bottom: 0;
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-nav .login {
+  background-color: white;
+  width: 43%;
+  min-height: 3rem;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  margin: 1.25rem 1rem 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #222B45;
+  text-align: center;
+}
+.bottom-nav .signup {
+  background-color: #FFEA88;
+  width: 43%;
+  min-height: 3rem;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #222B45;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+.login__container {
+  margin: 3.5rem 1rem 2rem;
+}
+@media (min-width: 992px) {
+  .login__container {
+    margin: 1.25rem 18rem 0 13.56rem;
+    display: grid;
+    grid-template-columns: 24rem 20.5rem;
+    gap: 15rem;
+  }
+}
+
+.login__side h3 {
+  display: none;
+}
+.login__side .first_p {
+  display: none;
+}
+@media (min-width: 992px) {
+  .login__side {
+    grid-column: 2/-1;
+  }
+  .login__side h3 {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #222B45;
+    text-align: center;
+  }
+  .login__side .first_p {
+    display: block;
+    margin: 0.5rem 0 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #8F9BB3;
+    text-align: center;
+  }
+}
+
+.image {
+  display: none;
+}
+@media (min-width: 992px) {
+  .image {
+    display: block;
+    grid-column: 1/2;
+  }
+  .image img {
+    padding-top: 5rem;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.socials .btn {
+  height: 2.75rem;
+  width: 49%;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #C5CEE0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #2E3A59;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.or {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.or p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #8F9BB3;
+  text-align: center;
+}
+
+.line {
+  background-color: #E4E9F2;
+  height: 1px;
+  width: 7.68rem;
+}
+
+label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #2E3A59;
+  text-align: left;
+}
+
+.in-put {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 8px;
+  border: 1px solid #C5CEE0;
+  padding: 0.875rem 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #8F9BB3;
+  text-align: left;
+}
+
+.password {
+  position: relative;
+}
+.password #togglePassword {
+  position: absolute;
+  top: 1.5rem;
+}
+
+.bottom-line {
+  margin-top: 1.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remind {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#reminder {
+  width: 1rem;
+  height: 1rem;
+}
+
+.last-btn {
+  width: 100%;
+  height: 3rem;
+  margin-top: 3.5rem;
+  background-color: #FFD339;
+  border-radius: 8px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222B45;
+  text-align: center;
+}/*# sourceMappingURL=login.css.map */
